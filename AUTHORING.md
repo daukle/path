@@ -57,3 +57,11 @@ first tests this behaviour has had of its own.
 Because this is a source plugin, its output is only observable through a language. The cases use a
 minimal `plaintext` fixture language that prints `<project> <module>` per resolved entry, which is
 deliberately not a copy of any of the four real language plugins.
+
+## What CI builds this against
+
+`test.yml` names no `extra_ref`, so the shared workflow checks out `daukle/daukle`'s **default
+branch** and builds daukle from it. That branch is `main`, which was promoted on 2026-09-30 and now
+carries managed mode, so a case here runs against current core rather than against whatever `main`
+held when these tests were written. A failure that appears without this repository changing is
+therefore a core change, and the first place to look is `daukle/daukle`'s recent history.
