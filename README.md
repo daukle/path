@@ -1,0 +1,7 @@
+# path
+
+The local path source plugin for daukle. It reads a producer manifest from a directory inside the consuming project, which is how a multi-project repository resolves its own modules without a network.
+
+## License
+
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
